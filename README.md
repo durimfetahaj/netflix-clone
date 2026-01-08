@@ -1,13 +1,18 @@
-🎬 StreamNext — 2026 Netflix Remix
-A high-performance Netflix clone built with Next.js 16, React 19, and Supabase. This project features a multi-profile authentication system, semantic AI search, and adaptive bit-rate streaming.
+# 🎬 StreamNext — 2026 Netflix Remix
 
-🚀 Key Features
-Multi-Profile Auth: Personalized profiles (Adult/Kids) managed via Supabase and browser cookies.
+A high-performance, AI-native Netflix clone built to demonstrate modern full-stack patterns using **Next.js 16**, **React 19**, and **Supabase**.
 
-Partial Prerendering (PPR): Instant shell loading with streaming content rows.
 
-Semantic Search: AI-powered "vibe" search using Supabase Vector (pgvector).
+## 🌟 Highlights
+* **AI-Powered Semantic Search:** Search for movies by "vibe" or description using `pgvector`.
+* **Hybrid Rendering:** Leveraging **Partial Prerendering (PPR)** for sub-100ms shell loads.
+* **Multi-Profile Management:** Switch between user profiles with real-time preference syncing.
+* **Optimistic UI:** Instant "My List" interactions using React 19's `useOptimistic`.
 
-Optimistic UI: Instant "My List" updates using React 19's useOptimistic hook.
+## 🛠️ Tech Stack
+* **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Server Actions)
+* **Database:** [Supabase](https://supabase.com/) (PostgreSQL + Vector)
+* **Auth:** [Supabase SSR](https://supabase.com/docs/guides/auth/server-side-rendering)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Animations:** [Framer Motion](https://www.framer.com/motion/)
 
-Responsive Player: Adaptive HLS streaming for a buffer-free experience.
