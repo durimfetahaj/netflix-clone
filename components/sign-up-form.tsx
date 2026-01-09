@@ -109,8 +109,9 @@ export function SignUpForm({
               {error && <p className="text-sm text-red-500">{error}</p>}
               <Button
                 type="submit"
-                className="w-full bg-[#E50914] text-white hover:bg-[#E50914]/90 rounded-sm"
+                className="w-full bg-[#E50914] text-white hover:bg-[#E50914]/90 rounded-sm text-base"
                 disabled={isLoading}
+                size="lg"
               >
                 {isLoading ? "Creating an account..." : "Sign up"}
               </Button>

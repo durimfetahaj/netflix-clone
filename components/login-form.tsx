@@ -43,7 +43,7 @@ export function LoginForm({
 
   return (
     <div className={cn("w-full md:w-fit", className)} {...props}>
-      <Card className="bg-black/80 rounded-sm border-none min-h-[500px] min-w-[350px] max-w-md p-0">
+      <Card className="bg-black/80 rounded-sm border-none md:min-h-[650px] md:min-w-[450px] md:p-8">
         <CardHeader>
           <CardTitle className="text-3xl">Sign In</CardTitle>
         </CardHeader>
@@ -87,9 +87,9 @@ export function LoginForm({
               {error && <p className="text-sm text-red-500">{error}</p>}
               <Button
                 type="submit"
-                className="w-full bg-[#E50914] text-white hover:bg-[#E50914]/90 rounded-sm"
+                className="w-full bg-[#E50914] text-white hover:bg-[#E50914]/90 rounded-sm text-base"
                 disabled={isLoading}
-                size="sm"
+                size="lg"
               >
                 {isLoading ? "Logging in..." : "Sign in"}
               </Button>
