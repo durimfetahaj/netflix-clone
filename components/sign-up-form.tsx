@@ -57,8 +57,8 @@ export function SignUpForm({
   };
 
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+    <div className={cn("w-full md:w-fit", className)} {...props}>
+      <Card className="bg-black/80 rounded-sm border-none min-h-[500px] min-w-[350px] max-w-md p-0">
         <CardHeader>
           <CardTitle className="text-2xl">Sign up</CardTitle>
           <CardDescription>Create a new account</CardDescription>
@@ -75,6 +75,7 @@ export function SignUpForm({
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  className="h-12 rounded-sm border-stone-500 "
                 />
               </div>
               <div className="grid gap-2">
@@ -84,9 +85,11 @@ export function SignUpForm({
                 <Input
                   id="password"
                   type="password"
+                  placeholder="12345678"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  className="h-12 rounded-sm border-stone-500 "
                 />
               </div>
               <div className="grid gap-2">
@@ -96,13 +99,19 @@ export function SignUpForm({
                 <Input
                   id="repeat-password"
                   type="password"
+                  placeholder="12345678"
                   required
                   value={repeatPassword}
                   onChange={(e) => setRepeatPassword(e.target.value)}
+                  className="h-12 rounded-sm border-stone-500 "
                 />
               </div>
               {error && <p className="text-sm text-red-500">{error}</p>}
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button
+                type="submit"
+                className="w-full bg-[#E50914] text-white hover:bg-[#E50914]/90 rounded-sm"
+                disabled={isLoading}
+              >
                 {isLoading ? "Creating an account..." : "Sign up"}
               </Button>
             </div>
